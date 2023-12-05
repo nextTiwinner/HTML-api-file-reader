@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Локальное файловое хранилище</title>
+</head>
+
+<body>
+    <div id="file-drop-area" class="drop-area">
+        <p>Перетащите файлы сюда или</p>
+        <input type="file" id="file-input">
+        <label for="file-input" class="custom-file-label">Выберите файл</label>
+    </div>
+    <div id="chosen-file" class="chosen-file"></div>
+    <div class="filters">
+        <label>Фильтр по типу: <input type="text"
+                id="filter-type"></label>
+        <label>Фильтр по максимальному размеру (в байтах): <input type="number" id="filter-size"></label>
+        <button id="filter-button">Применить фильтры</button>
+    </div>
+    <h1>Файлы:</h1>
+    <div id="file-list"></div>
+    <script src="script.js"></script>
+    <script>
+        // let openRequest = indexedDB.open('bd', 3)
+        // openRequest.onsuccess = function () {
+        //     let db = openRequest.result;
+        //     console.log('db', db);
+        //     if (!db.objectStoreNames.contains('books')) { // если хранилище "books" не существует
+        //         db.createObjectStore('books', { keyPath: 'id' }); // создаём хранилище
+        //     }
+        //     // db.createObjectStore('books', { keyPath: 'id' });
+        //     console.log('db', db);
+        //     let transaction = db.transaction("books", "readwrite");
+        //     let books = transaction.objectStore("books");
+        //     console.log(books);
+        // };
+        // let openRequest = indexedDB.open("db", 2);
+        // openRequest.onsuccess = () => {
+        //     // console.log('db', openRequest.result);
+        //     const db = openRequest.result
+        //     const transaction = db.transaction("books", "readwrite");
+        //     const books = transaction.objectStore("books");
+
+        //     let book = {
+        //         id: 'js',
+        //         price: 11,
+        //         created: new Date()
+        //     };
+
+        //     let request = books.add({ ...book, id: 'tsx', });
+
+        //     request.onsuccess = function () {
+        //         console.log("Книга добавлена в хранилище", request.result);
+        //     };
+
+        //     request.onerror = function () {
+        //         console.log("Ошибка", request.error);
+        //     };
+        // }
+    </script>
+</body>
+
+</html>
